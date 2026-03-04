@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monthly Streak | StudyLong</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Monthly Streak</h1>
+    <p>// don't break the chain</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="resources.html">Resources</a>
+    <a href="notes.html">Notes</a>
+    <a href="timer.html">Focus Timer</a>
+    <a href="tasks.html">Tasks</a>
+    <a href="planner.html">Planner</a>
+    <a href="streak.html" class="active">Streak</a>
+</nav>
+
+<main class="container">
+    <section>
+        <div class="monthly-header">
+            <h2>📅 Focus Calendar</h2>
+            <div class="month-nav" style="display:flex;gap:8px;align-items:center;">
+                <button id="prevMonth">← Prev</button>
+                <span class="month-label" id="monthLabel"></span>
+                <button id="nextMonth">Next →</button>
+            </div>
+        </div>
+
+        <div class="monthly-grid" id="monthlyGrid"></div>
+
+        <div class="monthly-stats">
+            <div class="stat-pill">Total Focused Days: <span id="focusedDays">0</span></div>
+            <div class="stat-pill">Current Streak: <span id="currentStreak">0</span> days</div>
+        </div>
+
+        <p style="margin-top:16px; font-size:0.8rem; color:var(--text-muted);">
+            🟢 Green = focused day. Complete a session on the timer to mark a day.
+        </p>
+    </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

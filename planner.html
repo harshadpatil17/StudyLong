@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Long Term Planner | StudyLong</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Long Term Planner</h1>
+    <p>// master any subject, one day at a time</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="resources.html">Resources</a>
+    <a href="notes.html">Notes</a>
+    <a href="timer.html">Focus Timer</a>
+    <a href="tasks.html">Tasks</a>
+    <a href="planner.html" class="active">Planner</a>
+    <a href="streak.html">Streak</a>
+</nav>
+
+<main class="container">
+    <section>
+        <h2>🗺️ Create Roadmap</h2>
+        <p style="color:var(--text-muted); margin-bottom:16px; font-size:0.9rem;">
+            Plan entire subjects day by day — e.g. "Java in 15 days" or "DSA in 30 days".
+        </p>
+        <div class="input-group">
+            <input type="text" id="goalInput" placeholder="Goal name (e.g. Learn Python)">
+            <input type="number" id="dayInput" placeholder="Days (e.g. 15)" style="flex: 0 0 120px; min-width:100px;" min="1" max="365">
+            <button class="btn-add" onclick="createGoal()">Generate Plan</button>
+        </div>
+    </section>
+
+    <div id="plannerContainer" class="planner-container"></div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

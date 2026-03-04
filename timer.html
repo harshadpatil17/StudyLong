@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus Timer | StudyLong</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Focus Timer</h1>
+    <p>// silence the noise, start the clock</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="resources.html">Resources</a>
+    <a href="notes.html">Notes</a>
+    <a href="timer.html" class="active">Focus Timer</a>
+    <a href="tasks.html">Tasks</a>
+    <a href="planner.html">Planner</a>
+    <a href="streak.html">Streak</a>
+</nav>
+
+<main class="container">
+    <section>
+        <div class="focus-timer-container">
+            <div class="timer-circle">
+                <svg width="220" height="220" viewBox="0 0 220 220">
+                    <circle cx="110" cy="110" r="100" class="bg-circle"></circle>
+                    <circle id="progressCircle" cx="110" cy="110" r="100" class="progress-circle"></circle>
+                </svg>
+                <div class="timer-text" id="time">25:00</div>
+            </div>
+            <div class="timer-label" id="timerLabel">— FOCUS SESSION —</div>
+
+            <div class="controls-wrapper">
+                <div class="button-row">
+                    <button class="btn-start" onclick="startTimer()">▶ Start</button>
+                    <button class="btn-pause" onclick="pauseTimer()">⏸ Pause</button>
+                    <button class="btn-reset" onclick="resetTimer()">↺ Reset</button>
+                </div>
+                <div class="button-row">
+                    <button class="btn-mode active-mode" data-mins="25" onclick="setTimer(25)">25m Focus</button>
+                    <button class="btn-mode" data-mins="50" onclick="setTimer(50)">50m Deep</button>
+                    <button class="btn-mode" data-mins="5" onclick="setTimer(5, true)">5m Break</button>
+                    <button class="btn-mode" data-mins="10" onclick="setTimer(10, true)">10m Break</button>
+                </div>
+            </div>
+
+            <div class="session-count">
+                Sessions today: <span id="sessionsCount">0</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="streak-section">
+        <h3>🔥 30-Day Streak</h3>
+        <div id="streakGrid" class="streak-grid"></div>
+        <div class="streak-stats">
+            <div class="stat-pill">Current Streak: <span id="currentStreak">0</span> days</div>
+            <div class="stat-pill">Total Focused Days: <span id="totalDays">0</span></div>
+        </div>
+        <p style="margin-top:12px; font-size:0.8rem; color:var(--text-muted);">
+            💡 A session must complete fully to count towards your streak.
+            <a href="streak.html" style="color:var(--accent); text-decoration:none; margin-left:8px;">View monthly calendar →</a>
+        </p>
+    </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes Repository | StudyLong</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Engineering Notes</h1>
+    <p>// select your branch, access curated material</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="resources.html">Resources</a>
+    <a href="notes.html" class="active">Notes</a>
+    <a href="timer.html">Focus Timer</a>
+    <a href="tasks.html">Tasks</a>
+    <a href="planner.html">Planner</a>
+    <a href="streak.html">Streak</a>
+</nav>
+
+<main class="container">
+    <section>
+        <h2>🏫 Select Department</h2>
+        <div class="branch-grid">
+            <a href="#cse" class="branch-card" onclick="showBranch('cse', event)">
+                <span class="branch-icon">💻</span>
+                CSE
+            </a>
+            <a href="#aiml" class="branch-card" onclick="showBranch('aiml', event)">
+                <span class="branch-icon">🤖</span>
+                AIML
+            </a>
+            <a href="#entc" class="branch-card" onclick="showBranch('entc', event)">
+                <span class="branch-icon">📡</span>
+                ENTC
+            </a>
+            <a href="#ec" class="branch-card" onclick="showBranch('ec', event)">
+                <span class="branch-icon">⚡</span>
+                E &amp; C
+            </a>
+        </div>
+    </section>
+
+    <!-- BRANCH CONTENT (hidden by default, shown on click) -->
+    <section id="notes-cse" class="branch-notes" style="display:none;">
+        <h3>💻 CSE — Notes</h3>
+        <ul class="notes-list">
+            <li>
+                <a href="#">Data Structures & Algorithms — Unit 1–5</a>
+                <span class="note-tag">SEM 3</span>
+            </li>
+            <li>
+                <a href="#">Operating Systems — Complete Notes</a>
+                <span class="note-tag">SEM 4</span>
+            </li>
+            <li>
+                <a href="#">Database Management Systems</a>
+                <span class="note-tag">SEM 4</span>
+            </li>
+            <li>
+                <a href="#">Computer Networks — Unit 3–5</a>
+                <span class="note-tag">SEM 5</span>
+            </li>
+            <li>
+                <a href="#">Applied Mathematics III (All Branches)</a>
+                <span class="note-tag">SEM 3</span>
+            </li>
+            <li>
+                <a href="https://docs.google.com/document/d/1ztjJ_Tqe4RBIGs4fLRS2bEIX8ES489q4ZRLE3Urgm1w/edit?usp=drive_link" target="_blank">Unit 2 — Linked Lists & Trees</a>
+                <span class="note-tag">SEM 3</span>
+            </li>
+        </ul>
+    </section>
+
+    <section id="notes-aiml" class="branch-notes" style="display:none;">
+        <h3>🤖 AIML — Notes</h3>
+        <ul class="notes-list">
+            <li>
+                <a href="#">Introduction to Machine Learning — Unit 1–4</a>
+                <span class="note-tag">SEM 4</span>
+            </li>
+            <li>
+                <a href="#">Python for Data Science</a>
+                <span class="note-tag">SEM 3</span>
+            </li>
+            <li>
+                <a href="#">Data Structures & Algorithms (CSE/AIML)</a>
+                <span class="note-tag">SEM 3</span>
+            </li>
+            <li>
+                <a href="#">Neural Networks & Deep Learning Basics</a>
+                <span class="note-tag">SEM 5</span>
+            </li>
+            <li>
+                <a href="#">Applied Mathematics III (All Branches)</a>
+                <span class="note-tag">SEM 3</span>
+            </li>
+        </ul>
+    </section>
+
+    <section id="notes-entc" class="branch-notes" style="display:none;">
+        <h3>📡 ENTC — Notes</h3>
+        <ul class="notes-list">
+            <li>
+                <a href="#">Digital Logic Design — Complete</a>
+                <span class="note-tag">SEM 3</span>
+            </li>
+            <li>
+                <a href="#">Microprocessors & Microcontrollers</a>
+                <span class="note-tag">SEM 4</span>
+            </li>
+            <li>
+                <a href="#">Signal & Systems — Unit 1–5</a>
+                <span class="note-tag">SEM 4</span>
+            </li>
+            <li>
+                <a href="#">Communication Engineering Fundamentals</a>
+                <span class="note-tag">SEM 5</span>
+            </li>
+            <li>
+                <a href="#">Applied Mathematics III (All Branches)</a>
+                <span class="note-tag">SEM 3</span>
+            </li>
+        </ul>
+    </section>
+
+    <section id="notes-ec" class="branch-notes" style="display:none;">
+        <h3>⚡ E &amp; C — Notes</h3>
+        <ul class="notes-list">
+            <li>
+                <a href="#">Circuit Theory & Networks</a>
+                <span class="note-tag">First Year</span>
+            </li>
+            <li>
+                <a href="#">Electromagnetic Fields & Waves</a>
+                <span class="note-tag">SEM 4</span>
+            </li>
+            <li>
+                <a href="#">Power Electronics — Unit 1–4</a>
+                <span class="note-tag">SEM 5</span>
+            </li>
+            <li>
+                <a href="#">Control Systems Engineering</a>
+                <span class="note-tag">SEM 5</span>
+            </li>
+            <li>
+                <a href="#">Applied Mathematics III (All Branches)</a>
+                <span class="note-tag">SEM 3</span>
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h3>📢 Latest Uploads</h3>
+        <ul class="notes-list">
+            <li>
+                <a href="#">Applied Mathematics III (All Branches)</a>
+                <span class="note-tag">NEW</span>
+            </li>
+            <li>
+                <a href="#">Data Structures & Algorithms (CSE/AIML)</a>
+                <span class="note-tag">NEW</span>
+            </li>
+            <li>
+                <a href="#">Digital Logic Design (ENTC)</a>
+                <span class="note-tag">NEW</span>
+            </li>
+        </ul>
+    </section>
+</main>
+
+<footer>
+    <p>© 2026 StudyLong</p>
+</footer>
+
+<script>
+function showBranch(branch, event) {
+    event.preventDefault();
+    document.querySelectorAll('.branch-notes').forEach(s => s.style.display = 'none');
+    const target = document.getElementById('notes-' + branch);
+    if (target) {
+        target.style.display = 'block';
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+}
+</script>
+</body>
+</html>
