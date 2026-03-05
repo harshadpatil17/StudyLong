@@ -1,30 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resources | StudyLong</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<header>
-    <h1>Resources & Links</h1>
-    <p>// curated references for engineering students</p>
-</header>
+    <header>
+        <h1>Resources & Links</h1>
+        <p>// curated references for engineering students</p>
+    </header>
 
-<nav>
-    <a href="index.html">Home</a>
-    <a href="resources.html" class="active">Resources</a>
-    <a href="notes.html">Notes</a>
-    <a href="timer.html">Focus Timer</a>
-    <a href="tasks.html">Tasks</a>
-    <a href="planner.html">Planner</a>
-    <a href="streak.html">Streak</a>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="resources.html" class="active">Resources</a>
+        <a href="notes.html">Notes</a>
+        <a href="timer.html">Focus Timer</a>
+        <a href="tasks.html">Tasks</a>
+        <a href="planner.html">Planner</a>
+        <a href="streak.html">Streak</a>
+    <button class="search-btn" onclick="openSearch()">🔍 Search</button>
 </nav>
-
-<main class="container">
-    <!-- <section>
+    <p style="display: flex; align-items: center; justify-content: center;">*//*This Page is under Developement</p>
+    <main class="container">
+        <!-- <section>
         <h2>📂 Reference Documents</h2>
         <p style="color:var(--text-muted); margin-bottom:16px; font-size:0.9rem;">Key engineering documents, formula sheets, and PDF references.</p>
         <ul class="resource-list">
@@ -76,150 +79,331 @@
         </ul>
     </section> -->
 
-    <section>
-        <h2>📺 HTML</h2>
-        <p style="color:var(--text-muted); margin-bottom:16px; font-size:0.9rem;">High-quality tutorials for complex concepts, hand-picked for clarity.</p>
-        <div class="video-links">
-            <div class="link-card">
-                <a href="https://youtu.be/HBqWsrqK89U?si=2x8W-AIKcra4sYqP" target="_blank">
-                    <div style="display:flex;align-items:center;gap:12px;">
-                        <div class="resource-icon icon-video">▶️</div>
-                        <div>
-                            <div style="font-weight:600; color: #000;">HTML and CSS - One Shot by Raghav Sir.(CW)</div>
-                            <div style="font-size:0.78rem; color:var(--text-muted); color:var(--text-muted);">Easy Explaining - completed in 6 hours</div>
+        <section>
+            <h2>📺 HTML</h2>
+            <p style="color:var(--text-muted); margin-bottom:16px; font-size:0.9rem;">High-quality tutorials for complex
+                concepts, hand-picked for clarity.</p>
+            <div class="video-links">
+                <div class="link-card">
+                    <a href="https://youtu.be/HBqWsrqK89U?si=2x8W-AIKcra4sYqP" target="_blank">
+                        <div style="display:flex;align-items:center;gap:12px;">
+                            <div class="resource-icon icon-video">▶️</div>
+                            <div>
+                                <div style="font-weight:600; color: #000;">HTML and CSS - One Shot by Raghav Sir.(CW)
+                                </div>
+                                <div style="font-size:0.78rem; color:var(--text-muted); color:var(--text-muted);">Easy
+                                    Explaining - completed in 6 hours</div>
+                            </div>
                         </div>
-                    </div>
-                    <span style="color:var(--accent);">↗</span>
-                </a>
-            </div>
-            <div class="link-card">
-                <a href="https://youtu.be/YR7q48s2QoU?si=eFm3j0sDYWZnQsC4" target="_blank">
-                    <div style="display:flex;align-items:center;gap:12px;">
-                        <div class="resource-icon icon-video">▶️</div>
-                        <div>
-                            <div style="font-weight:600; color: #000;">HTML - One Shot by </div>
-                            <div style="font-size:0.78rem; color:var(--text-muted); color:var(--text-muted);">Easy Explaining - completed in 6 hours</div>
+                        <span style="color:var(--accent);">↗</span>
+                    </a>
+                </div>
+                <div class="link-card">
+                    <a href="https://youtu.be/YR7q48s2QoU?si=eFm3j0sDYWZnQsC4" target="_blank">
+                        <div style="display:flex;align-items:center;gap:12px;">
+                            <div class="resource-icon icon-video">▶️</div>
+                            <div>
+                                <div style="font-weight:600; color: #000;">HTML - One Shot by </div>
+                                <div style="font-size:0.78rem; color:var(--text-muted); color:var(--text-muted);">Easy
+                                    Explaining - completed in 6 hours</div>
+                            </div>
                         </div>
-                    </div>
-                    <span style="color:var(--accent);">↗</span>
-                </a>
-            </div>
-            <div class="link-card">
-                <a href="https://youtu.be/HcOc7P5BMi4?si=WuBtYl4nheOBnvOt" target="_blank">
-                    <div style="display:flex;align-items:center;gap:12px;">
-                        <div class="resource-icon icon-video">▶️</div>
-                        <div>
-                            <div style="font-weight:600; color: #000;">HTML - One Shot by Shradha Didi (Apana College)</div>
-                            <div style="font-size:0.78rem; color:var(--text-muted); color:var(--text-muted);">Easy Explaining - completed in 6 hours</div>
+                        <span style="color:var(--accent);">↗</span>
+                    </a>
+                </div>
+                <div class="link-card">
+                    <a href="https://youtu.be/HcOc7P5BMi4?si=WuBtYl4nheOBnvOt" target="_blank">
+                        <div style="display:flex;align-items:center;gap:12px;">
+                            <div class="resource-icon icon-video">▶️</div>
+                            <div>
+                                <div style="font-weight:600; color: #000;">HTML - One Shot by Shradha Didi (Apana
+                                    College)</div>
+                                <div style="font-size:0.78rem; color:var(--text-muted); color:var(--text-muted);">Easy
+                                    Explaining - completed in 6 hours</div>
+                            </div>
                         </div>
-                    </div>
-                    <span style="color:var(--accent);">↗</span>
-                </a>
+                        <span style="color:var(--accent);">↗</span>
+                    </a>
+                </div>
             </div>
+        </section>
+
+        <section>
+            <h2>📺 Its JavaScript</h2>
+            <p style="color:var(--text-muted); margin-bottom:16px; font-size:0.9rem;">High-quality tutorials for complex
+                concepts, hand-picked for clarity.</p>
+            <div class="video-links">
+                <div class="link-card">
+                    <a href="https://youtu.be/427pAhy9dI8?si=X0wWGjr2rN7kEv9W" target="_blank">
+                        <div style="display:flex;align-items:center;gap:12px;">
+                            <div class="resource-icon icon-video">▶️</div>
+                            <div>
+                                <div style="font-weight:600; color: #000;">Basics Of JavaScript by Raghav Garg Sir (CW)
+                                </div>
+                                <div style="font-size:0.78rem; color:var(--text-muted); color:var(--text-muted);">Easy
+                                    Explaining - completed in 6 hours</div>
+                            </div>
+                        </div>
+                        <span style="color:var(--accent);">↗</span>
+                    </a>
+                </div>
+                <div class="link-card">
+                    <a href="https://youtu.be/cpoXLj24BDY?si=PlckVc-TxgJJGe-x" target="_blank">
+                        <div style="display:flex;align-items:center;gap:12px;">
+                            <div class="resource-icon icon-video">▶️</div>
+                            <div>
+                                <div style="font-weight:600;">JavaScript - One Shot by Prashant Sir (Complete Coding by
+                                    Prashant Sir) </div>
+                                <div style="font-size:0.78rem; color:var(--text-muted);">Deep Teaching Full JavaScript
+                                    in 14 Hours</div>
+                            </div>
+                        </div>
+                        <span style="color:var(--accent);">↗</span>
+                    </a>
+                </div>
+                <div class="link-card">
+                    <a href="https://youtu.be/a-wVHL0lpb0?si=PinOS1M4SoFPBsvf" target="_blank">
+                        <div style="display:flex;align-items:center;gap:12px;">
+                            <div class="resource-icon icon-video">▶️</div>
+                            <div>
+                                <div style="font-weight:600;">Basics of JavaScript - One Shot by Sheryians Coding School
+                                </div>
+                                <div style="font-size:0.78rem; color:var(--text-muted);">First Part - Easy Explaining
+                                    and Basics Covered in 8 Hours</div>
+                            </div>
+                        </div>
+                        <span style="color:var(--accent);">↗</span>
+                    </a>
+                </div>
+                <div class="link-card">
+                    <a href="https://youtu.be/sscX432bMZo?si=jl7s5zZcL4Bs5Su-" target="_blank">
+                        <div style="display:flex;align-items:center;gap:12px;">
+                            <div class="resource-icon icon-video">▶️</div>
+                            <div>
+                                <div style="font-weight:600;">JavaScript - One Shot by Chai Aur Code </div>
+                                <div style="font-size:0.78rem; color:var(--text-muted);">Indurty Level and begginer
+                                    fiendly teaching in easy Hindi Language</div>
+                            </div>
+                        </div>
+                        <span style="color:var(--accent);">↗</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>📺 C-language</h2>
+            <p style="color:var(--text-muted); margin-bottom:16px; font-size:0.9rem;">High-quality tutorials for complex
+                concepts, hand-picked for clarity.</p>
+            <div class="video-links">
+                <div class="link-card">
+                    <a href="https://youtu.be/i0ovgS-jCQ8?si=cB1rvAnb9ZhYcTJ1" target="_blank">
+                        <div style="display:flex;align-items:center;gap:12px;">
+                            <div class="resource-icon icon-video">▶️</div>
+                            <div>
+                                <div style="font-weight:600; color: #000;">C Language Full Course - Part 1 (Beginner to
+                                    Advance) | 100+ Questions + Notes(college wallah)</div>
+                                <div style="font-size:0.78rem; color:var(--text-muted); color:var(--text-muted);">
+                                    Ultimate C Language Full Course, tailored for beginners and designed to take you
+                                    from novice to advanced levels of programming proficiency.</div>
+                            </div>
+                        </div>
+                        <span style="color:var(--accent);">↗</span>
+                    </a>
+                </div>
+                <div class="link-card">
+                    <a href="https://youtu.be/i0ovgS-jCQ8?si=cB1rvAnb9ZhYcTJ1" target="_blank">
+                        <div style="display:flex;align-items:center;gap:12px;">
+                            <div class="resource-icon icon-video">▶️</div>
+                            <div>
+                                <div style="font-weight:600; color: #000;">Complete C Language in One Shot - Part 2 |
+                                    100+ Questions + Notes(college wallah)</div>
+                                <div style="font-size:0.78rem; color:var(--text-muted); color:var(--text-muted);">🚀
+                                    Enhance your coding skills with this comprehensive guide to programming
+                                    fundamentals! 📚 Join us as we explore key concepts such as functions, recursion,
+                                    arrays, 2D-arrays, strings, structures, and unions.</div>
+                            </div>
+                        </div>
+                        <span style="color:var(--accent);">↗</span>
+                    </a>
+                </div>
+                <div class="link-card">
+                    <a href="https://youtu.be/i0ovgS-jCQ8?si=cB1rvAnb9ZhYcTJ1" target="_blank">
+                        <div style="display:flex;align-items:center;gap:12px;">
+                            <div class="resource-icon icon-video">▶️</div>
+                            <div>
+                                <div style="font-weight:600; color: #000;">🚀🔥 C Complete Course with Certification | 2
+                                    Projects, 100+ Programming Challenges, Notes, Beginner(Complete Coding by Prashant
+                                    Sir)</div>
+                                <div style="font-size:0.78rem; color:var(--text-muted); color:var(--text-muted);">🚀
+                                    Enhance your coding skills with this comprehensive guide to programming
+                                    fundamentals! 📚 Join us as we explore key concepts such as functions, recursion,
+                                    arrays, 2D-arrays, strings, structures, and unions.</div>
+                            </div>
+                        </div>
+                        <span style="color:var(--accent);">↗</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>📺 Java</h2>
+            <p style="color:var(--text-muted); margin-bottom:16px; font-size:0.9rem;">High-quality tutorials for complex
+                concepts, hand-picked for clarity.</p>
+            <div class="video-links">
+                <div class="link-card">
+                    <a href="https://youtube.com/playlist?list=PL78RhpUUKSweClRi_l05UgfE3053-zkRf&si=G31Nvs9MpHGm8Al7" target="_blank">
+                        <div style="display:flex;align-items:center;gap:12px;">
+                            <div class="resource-icon icon-video">▶️</div>
+                            <div>
+                                <div style="font-weight:600; color: #000;">Java Oneshot Lecture Playlist By Complete Coding by Prashant
+                                    Sir </div>
+                                <div style="font-size:0.78rem; color:var(--text-muted); color:var(--text-muted);">
+                                    Java is an unapologetically vast ecosystem that demands more than a casual glance; it requires a deep, systematic immersion into its intricate architecture. Mastery is only achieved through detailed, long-form lectures that unpack its robust syntax and complex object-oriented principles. There are no shortcuts here, as the language rewards only those who approach it with unwavering consistency and a rigorous study habit. To harness its full power, one must embrace the grind of a steep learning curve and the discipline of a dedicated scholar.</div>
+                            </div>
+                        </div>
+                        <span style="color:var(--accent);">↗</span>
+                    </a>
+                </div>
+                <div class="link-card">
+                    <a href="https://youtu.be/BGTx91t8q50?si=lkFsF2kJoO0xlLL1" target="_blank">
+                        <div style="display:flex;align-items:center;gap:12px;">
+                            <div class="resource-icon icon-video">▶️</div>
+                            <div>
+                                <div style="font-weight:600; color: #000;">12 hours One shot for begginers Java Learner by Telusko</div>
+                                <div style="font-size:0.78rem; color:var(--text-muted); color:var(--text-muted);">The 4 million people watchted this tutorial for the learning of Java language❤️‍🔥</div>
+                            </div>
+                        </div>
+                        <span style="color:var(--accent);">↗</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>📺 Python</h2>
+            <p style="color:var(--text-muted); margin-bottom:16px; font-size:0.9rem;">High-quality tutorials for complex
+                concepts, hand-picked for clarity.</p>
+            <div class="video-links">
+                <div class="link-card">
+                    <a href="https://youtu.be/UrsmFxEIp5k?si=-o40wyM76hg2FtWX" target="_blank">
+                        <div style="display:flex;align-items:center;gap:12px;">
+                            <div class="resource-icon icon-video">▶️</div>
+                            <div>
+                                <div style="font-weight:600; color: #000;">Python Tutorial For Beginners in Hindi | Complete Python Course 🔥 by CodeWithHarry</div>
+                                <div style="font-size:0.78rem; color:var(--text-muted); color:var(--text-muted);">This comprehensive 11-hour masterclass is designed to take you from a complete beginner to a confident programmer by covering everything from Python syntax to advanced AI-driven projects.</div>
+                            </div>
+                        </div>
+                        <span style="color:var(--accent);">↗</span>
+                    </a>
+                </div>
+                <div class="link-card">
+                    <a href="https://youtu.be/ERCMXc8x7mc?si=gGCKPnvC2LfIdqIY" target="_blank">
+                        <div style="display:flex;align-items:center;gap:12px;">
+                            <div class="resource-icon icon-video">▶️</div>
+                            <div>
+                                <div style="font-weight:600; color: #000;">Python Tutorial for Beginners - Full Course (with Notes & Practice Questions) by Apana College</div>
+                                <div style="font-size:0.78rem; color:var(--text-muted); color:var(--text-muted);">This end-to-end Python tutorial covers everything from basic variables and data types to advanced object-oriented programming, ensuring a solid foundation for any coding career.</div>
+                            </div>
+                        </div>
+                        <span style="color:var(--accent);">↗</span>
+                    </a>
+                </div>
+                <div class="link-card">
+                    <a href="https://youtu.be/_aWbUudZ5Yo?si=-8KV_h0qHBwYGl2t" target="_blank">
+                        <div style="display:flex;align-items:center;gap:12px;">
+                            <div class="resource-icon icon-video">▶️</div>
+                            <div>
+                                <div style="font-weight:600; color: #000;">Python Full Course for Beginners to Advanced | 12 Hours Complete Tutorial + Python Book</div>
+                                <div style="font-size:0.78rem; color:var(--text-muted); color:var(--text-muted);">This massive 13-hour bootcamp covers the entire Python landscape, from your very first "Hello World" to advanced concepts like decorators, logic building, and AI-driven web applications.</div>
+                            </div>
+                        </div>
+                        <span style="color:var(--accent);">↗</span>
+                    </a>
+                </div>
+                <div class="link-card">
+                    <a href="https://youtu.be/XnSasPR2KJI?si=fpsTngKw4qp1Skzx" target="_blank">
+                        <div style="display:flex;align-items:center;gap:12px;">
+                            <div class="resource-icon icon-video">▶️</div>
+                            <div>
+                                <div style="font-weight:600; color: #000;">Python Full Course For Beginners [Tutorial] 2023 | Python One Shot | College Wallah<div>
+                                <div style="font-size:0.78rem; color:var(--text-muted); color:var(--text-muted);">This comprehensive 11-hour "one-shot" tutorial is designed for everyone from absolute beginners to those looking to pivot into web development, machine learning, or data science. By breaking down complex topics like recursion, OOPs, and data structures into digestible segments, this lecture ensures students build a rock-solid foundation through consistent practice and detailed explanations.</div>
+                            </div>
+                        </div>
+                        <span style="color:var(--accent);">↗</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>🌐 Useful Websites</h2>
+            <div class="video-links">
+                <div class="link-card">
+                    <a href="https://www.geeksforgeeks.org" target="_blank">
+                        <div style="display:flex;align-items:center;gap:12px;">
+                            <div class="resource-icon icon-doc">🌐</div>
+                            <div>
+                                <div style="font-weight:600; color: var(--text);">GeeksForGeeks</div>
+                                <div style="font-size:0.78rem; color:var(--text-muted);">DSA, CS fundamentals, interview
+                                    prep</div>
+                            </div>
+                        </div>
+                        <span style="color:var(--accent);">↗</span>
+                    </a>
+                </div>
+                <div class="link-card">
+                    <a href="https://leetcode.com" target="_blank">
+                        <div style="display:flex;align-items:center;gap:12px;">
+                            <div class="resource-icon icon-doc">💻</div>
+                            <div>
+                                <div style="font-weight:600; color: var(--text);">LeetCode</div>
+                                <div style="font-size:0.78rem; color:var(--text-muted);">Practice DSA problems for
+                                    placements</div>
+                            </div>
+                        </div>
+                        <span style="color:var(--accent);">↗</span>
+                    </a>
+                </div>
+                <div class="link-card">
+                    <a href="https://www.khanacademy.org" target="_blank">
+                        <div style="display:flex;align-items:center;gap:12px;">
+                            <div class="resource-icon icon-doc">📚</div>
+                            <div>
+                                <div style="font-weight:600;  color: var(--text);">Khan Academy</div>
+                                <div style="font-size:0.78rem; color:var(--text-muted);">Math, Physics foundations —
+                                    free and interactive</div>
+                            </div>
+                        </div>
+                        <span style="color:var(--accent);">↗</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 StudyLong</p>
+    </footer>
+
+
+<script src="script.js"></script>
+
+<!-- ===== SEARCH MODAL ===== -->
+<div class="search-overlay" id="searchOverlay">
+    <div class="search-modal">
+        <div class="search-input-row">
+            <span>🔍</span>
+            <input type="text" id="searchInput" placeholder="Search pages, notes, resources…" autocomplete="off">
+            <button class="search-close-btn" onclick="closeSearch()">ESC</button>
         </div>
-    </section>
-
-<section>
-        <h2>📺 Its JavaScript</h2>
-        <p style="color:var(--text-muted); margin-bottom:16px; font-size:0.9rem;">High-quality tutorials for complex concepts, hand-picked for clarity.</p>
-        <div class="video-links">
-            <div class="link-card">
-                <a href="https://youtu.be/427pAhy9dI8?si=X0wWGjr2rN7kEv9W" target="_blank">
-                    <div style="display:flex;align-items:center;gap:12px;">
-                        <div class="resource-icon icon-video">▶️</div>
-                        <div>
-                            <div style="font-weight:600; color: #000;">Basics Of JavaScript by Raghav Garg Sir (CW)</div>
-                            <div style="font-size:0.78rem; color:var(--text-muted); color:var(--text-muted);">Easy Explaining - completed in 6 hours</div>
-                        </div>
-                    </div>
-                    <span style="color:var(--accent);">↗</span>
-                </a>
-            </div>
-            <div class="link-card">
-                <a href="https://youtu.be/cpoXLj24BDY?si=PlckVc-TxgJJGe-x" target="_blank">
-                    <div style="display:flex;align-items:center;gap:12px;">
-                        <div class="resource-icon icon-video">▶️</div>
-                        <div>
-                            <div style="font-weight:600;">JavaScript - One Shot by Prashant Sir (Complete Coding by Prashant Sir) </div>
-                            <div style="font-size:0.78rem; color:var(--text-muted);">Deep Teaching Full JavaScript in 14 Hours</div>
-                        </div>
-                    </div>
-                    <span style="color:var(--accent);">↗</span>
-                </a>
-            </div>
-            <div class="link-card">
-                <a href="https://youtu.be/a-wVHL0lpb0?si=PinOS1M4SoFPBsvf" target="_blank">
-                    <div style="display:flex;align-items:center;gap:12px;">
-                        <div class="resource-icon icon-video">▶️</div>
-                        <div>
-                            <div style="font-weight:600;">Basics of JavaScript - One Shot by Sheryians Coding School </div>
-                            <div style="font-size:0.78rem; color:var(--text-muted);">First Part - Easy Explaining and Basics Covered in 8 Hours</div>
-                        </div>
-                    </div>
-                    <span style="color:var(--accent);">↗</span>
-                </a>
-            </div>
-             <div class="link-card">
-                <a href="https://youtu.be/sscX432bMZo?si=jl7s5zZcL4Bs5Su-" target="_blank">
-                    <div style="display:flex;align-items:center;gap:12px;">
-                        <div class="resource-icon icon-video">▶️</div>
-                        <div>
-                            <div style="font-weight:600;">JavaScript - One Shot by Chai Aur Code </div>
-                            <div style="font-size:0.78rem; color:var(--text-muted);">Indurty Level and begginer fiendly teaching in easy Hindi Language</div>
-                        </div>
-                    </div>
-                    <span style="color:var(--accent);">↗</span>
-                </a>
-            </div>
+        <div class="search-results" id="searchResults">
+            <div class="search-empty">Start typing to search pages, notes, and resources…</div>
         </div>
-    </section>
-
-    <section>
-        <h2>🌐 Useful Websites</h2>
-        <div class="video-links">
-            <div class="link-card">
-                <a href="https://www.geeksforgeeks.org" target="_blank">
-                    <div style="display:flex;align-items:center;gap:12px;">
-                        <div class="resource-icon icon-doc">🌐</div>
-                        <div>
-                            <div style="font-weight:600; color: var(--text);">GeeksForGeeks</div>
-                            <div style="font-size:0.78rem; color:var(--text-muted);">DSA, CS fundamentals, interview prep</div>
-                        </div>
-                    </div>
-                    <span style="color:var(--accent);">↗</span>
-                </a>
-            </div>
-            <div class="link-card">
-                <a href="https://leetcode.com" target="_blank">
-                    <div style="display:flex;align-items:center;gap:12px;">
-                        <div class="resource-icon icon-doc">💻</div>
-                        <div>
-                            <div style="font-weight:600; color: var(--text);">LeetCode</div>
-                            <div style="font-size:0.78rem; color:var(--text-muted);">Practice DSA problems for placements</div>
-                        </div>
-                    </div>
-                    <span style="color:var(--accent);">↗</span>
-                </a>
-            </div>
-            <div class="link-card">
-                <a href="https://www.khanacademy.org" target="_blank">
-                    <div style="display:flex;align-items:center;gap:12px;">
-                        <div class="resource-icon icon-doc">📚</div>
-                        <div>
-                            <div style="font-weight:600;  color: var(--text);">Khan Academy</div>
-                            <div style="font-size:0.78rem; color:var(--text-muted);">Math, Physics foundations — free and interactive</div>
-                        </div>
-                    </div>
-                    <span style="color:var(--accent);">↗</span>
-                </a>
-            </div>
-        </div>
-    </section>
-</main>
-
-<footer>
-    <p>© 2026 StudyLong</p>
-</footer>
-
+        <div class="search-hint">↑↓ navigate &nbsp;·&nbsp; Enter to open &nbsp;·&nbsp; Ctrl+K to open anytime</div>
+    </div>
+</div>
 </body>
+
 </html>

@@ -21,6 +21,7 @@
     <a href="tasks.html" class="active">Tasks</a>
     <a href="planner.html">Planner</a>
     <a href="streak.html">Streak</a>
+<button class="search-btn" onclick="openSearch()">🔍 Search</button>
 </nav>
 
 <main class="container">
@@ -51,5 +52,20 @@
 </main>
 
 <script src="script.js"></script>
+
+<!-- ===== SEARCH MODAL ===== -->
+<div class="search-overlay" id="searchOverlay">
+    <div class="search-modal">
+        <div class="search-input-row">
+            <span>🔍</span>
+            <input type="text" id="searchInput" placeholder="Search pages, notes, resources…" autocomplete="off">
+            <button class="search-close-btn" onclick="closeSearch()">ESC</button>
+        </div>
+        <div class="search-results" id="searchResults">
+            <div class="search-empty">Start typing to search pages, notes, and resources…</div>
+        </div>
+        <div class="search-hint">↑↓ navigate &nbsp;·&nbsp; Enter to open &nbsp;·&nbsp; Ctrl+K to open anytime</div>
+    </div>
+</div>
 </body>
 </html>

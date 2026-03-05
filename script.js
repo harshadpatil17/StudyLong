@@ -379,8 +379,116 @@ function renderPlanner() {
     });
 }
 
+// ─── SEARCH ───────────────────────────────────
+const SEARCH_DATA = [
+    // Pages
+    { title: 'Home', desc: 'Overview of all StudyLong features and quick start links.', page: 'Home', icon: '🏠', url: 'index.html' },
+    { title: 'Focus Timer', desc: '25-minute & 50-minute Pomodoro sessions with audio alerts and streak tracking.', page: 'Timer', icon: '⏱️', url: 'timer.html' },
+    { title: 'Daily Tasks', desc: 'Persistent task list with high, medium, and low priority levels. Saves locally.', page: 'Tasks', icon: '📝', url: 'tasks.html' },
+    { title: 'Long Term Planner', desc: 'Build day-by-day roadmaps. Plan subjects like "Java in 15 days" or "DSA in 30 days".', page: 'Planner', icon: '🗓️', url: 'planner.html' },
+    { title: 'Monthly Streak', desc: 'Visualize your focus consistency with a monthly calendar. Don\'t break the chain.', page: 'Streak', icon: '🔥', url: 'streak.html' },
+    { title: 'Engineering Notes', desc: 'Browse curated notes by branch: CSE, AIML, ENTC, and E&C.', page: 'Notes', icon: '📚', url: 'notes.html' },
+    { title: 'Resources & Links', desc: 'Curated tutorials for HTML, CSS, JavaScript, Java, Python and more.', page: 'Resources', icon: '🔗', url: 'resources.html' },
+    // Notes
+    { title: 'CSE Notes', desc: 'Data Structures, Operating Systems, DBMS, Computer Networks — SEM 3 to 5.', page: 'Notes', icon: '💻', url: 'notes.html' },
+    { title: 'AIML Notes', desc: 'Machine Learning, Python for Data Science, Neural Networks, DSA.', page: 'Notes', icon: '🤖', url: 'notes.html' },
+    { title: 'ENTC Notes', desc: 'Digital Logic Design, Microprocessors, Signals & Systems, Communication.', page: 'Notes', icon: '📡', url: 'notes.html' },
+    { title: 'E&C Notes', desc: 'Circuit Theory, Electromagnetic Fields, Power Electronics, Control Systems.', page: 'Notes', icon: '⚡', url: 'notes.html' },
+    { title: 'Data Structures & Algorithms', desc: 'Unit 1–5 notes, Linked Lists, Trees — CSE/AIML SEM 3.', page: 'Notes', icon: '📗', url: 'notes.html' },
+    { title: 'Operating Systems', desc: 'Complete notes — CSE SEM 4.', page: 'Notes', icon: '📗', url: 'notes.html' },
+    { title: 'Database Management Systems', desc: 'DBMS complete notes — CSE SEM 4.', page: 'Notes', icon: '📗', url: 'notes.html' },
+    { title: 'Computer Networks', desc: 'Unit 3–5 notes — CSE SEM 5.', page: 'Notes', icon: '📗', url: 'notes.html' },
+    { title: 'Applied Mathematics III', desc: 'Formula handbook for all branches — SEM 3.', page: 'Notes', icon: '📗', url: 'notes.html' },
+    { title: 'Digital Logic Design', desc: 'Complete notes — ENTC SEM 3.', page: 'Notes', icon: '📗', url: 'notes.html' },
+    { title: 'Microprocessors & Microcontrollers', desc: 'Full notes — ENTC SEM 4.', page: 'Notes', icon: '📗', url: 'notes.html' },
+    { title: 'Neural Networks & Deep Learning', desc: 'Basics — AIML SEM 5.', page: 'Notes', icon: '📗', url: 'notes.html' },
+    { title: 'Power Electronics', desc: 'Unit 1–4 — E&C SEM 5.', page: 'Notes', icon: '📗', url: 'notes.html' },
+    { title: 'Control Systems', desc: 'Engineering notes — E&C SEM 5.', page: 'Notes', icon: '📗', url: 'notes.html' },
+    // Resources
+    { title: 'HTML & CSS Tutorial (Raghav Sir)', desc: 'One Shot by CodeWithHarry — 6 hours, all fundamentals covered.', page: 'Resources', icon: '▶️', url: 'resources.html' },
+    { title: 'JavaScript Full Course', desc: 'Tutorials by Shradha Khapra and others — beginner to advanced.', page: 'Resources', icon: '▶️', url: 'resources.html' },
+    { title: 'Java One Shot Playlist', desc: 'Complete Java by Prashant Sir & 12-hour beginner course by Telusko.', page: 'Resources', icon: '▶️', url: 'resources.html' },
+    { title: 'Python Full Course', desc: 'Tutorials by CodeWithHarry, Apna College and College Wallah — Hindi & English.', page: 'Resources', icon: '▶️', url: 'resources.html' },
+    { title: 'GeeksForGeeks', desc: 'DSA, CS fundamentals, interview prep — top reference site.', page: 'Resources', icon: '🌐', url: 'resources.html' },
+    { title: 'LeetCode', desc: 'Practice DSA problems for placements.', page: 'Resources', icon: '💻', url: 'resources.html' },
+    { title: 'Khan Academy', desc: 'Math and Physics foundations — free and interactive.', page: 'Resources', icon: '📚', url: 'resources.html' },
+    // Features
+    { title: 'Pomodoro Timer', desc: '25m focus sessions and 5m/10m breaks. Tracks your daily streak automatically.', page: 'Timer', icon: '⏱️', url: 'timer.html' },
+    { title: 'Deep Work Session', desc: '50-minute deep focus mode for intensive study blocks.', page: 'Timer', icon: '⏱️', url: 'timer.html' },
+    { title: 'Streak Tracking', desc: 'Daily and monthly streak grids. A session must complete to count.', page: 'Streak', icon: '🔥', url: 'streak.html' },
+    { title: 'Create Roadmap', desc: 'Generate a day-by-day study plan for any subject and any number of days.', page: 'Planner', icon: '🗺️', url: 'planner.html' },
+    { title: 'Add Task', desc: 'Add tasks with HIGH, MEDIUM, or LOW priority. Check off when done.', page: 'Tasks', icon: '✅', url: 'tasks.html' },
+];
+
+function openSearch() {
+    const overlay = document.getElementById('searchOverlay');
+    if (!overlay) return;
+    overlay.classList.add('open');
+    const input = document.getElementById('searchInput');
+    if (input) { input.value = ''; input.focus(); }
+    renderSearchResults('');
+}
+
+function closeSearch() {
+    const overlay = document.getElementById('searchOverlay');
+    if (overlay) overlay.classList.remove('open');
+}
+
+function highlightMatch(text, query) {
+    if (!query) return text;
+    const regex = new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+    return text.replace(regex, '<mark>$1</mark>');
+}
+
+function renderSearchResults(query) {
+    const container = document.getElementById('searchResults');
+    if (!container) return;
+    const q = query.trim().toLowerCase();
+
+    if (!q) {
+        container.innerHTML = '<div class="search-empty">Start typing to search pages, notes, and resources…</div>';
+        return;
+    }
+
+    const results = SEARCH_DATA.filter(item =>
+        item.title.toLowerCase().includes(q) ||
+        item.desc.toLowerCase().includes(q) ||
+        item.page.toLowerCase().includes(q)
+    );
+
+    if (results.length === 0) {
+        container.innerHTML = `<div class="search-empty">No results for "<strong style="color:var(--primary)">${query}</strong>"</div>`;
+        return;
+    }
+
+    container.innerHTML = results.map(item => `
+        <a class="search-result-item" href="${item.url}">
+            <span class="search-result-icon">${item.icon}</span>
+            <div style="flex:1;min-width:0;">
+                <div class="search-result-title">${highlightMatch(item.title, q)}</div>
+                <div class="search-result-desc">${highlightMatch(item.desc, q)}</div>
+            </div>
+            <span class="search-result-page">${item.page}</span>
+        </a>
+    `).join('');
+}
+
 // ─── INIT ─────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
+    // Search (all pages)
+    const searchInput = document.getElementById('searchInput');
+    if (searchInput) {
+        searchInput.addEventListener('input', e => renderSearchResults(e.target.value));
+        searchInput.addEventListener('keydown', e => { if (e.key === 'Escape') closeSearch(); });
+    }
+    // Close overlay on backdrop click
+    const overlay = document.getElementById('searchOverlay');
+    if (overlay) overlay.addEventListener('click', e => { if (e.target === overlay) closeSearch(); });
+    // Global keyboard shortcut: Ctrl+K or Cmd+K
+    document.addEventListener('keydown', e => {
+        if ((e.ctrlKey || e.metaKey) && e.key === 'k') { e.preventDefault(); openSearch(); }
+    });
+
     // Timer page
     if (document.getElementById('time')) {
         updateTimerDisplay();
